@@ -1,12 +1,30 @@
 import React from 'react';
+import { omdb } from '../../lib/omdb';
 import './style.css';
 
-const MfxMovieListItem = ({ movie }) => (
-    <div className="mfx-movie-list-item">
-        <img alt={`${movie.Title} poster`} className="mfx-movie-list-item__poster" src={movie.Poster} />
-        <p className="mfx-movie-list-item__title">{movie.Title}</p>
-    </div>
-);
+class MfxMovieListItem extends React.Component {
+    state = {
+        movieDetails: {}
+    };
+
+    async componentDidMount() {
+        const movieDetails = await omdb.details(this.props.movie.imdbID);
+        this.setState({ movieDetails });
+    }
+
+    render() {
+        const movie = this.props.movie;
+        const movieDetails = this.state.movieDetails;
+
+        return (
+            <div className="mfx-movie-list-item">
+                <img alt={`${movie.Title} poster`} className="mfx-movie-list-item__poster" src={movie.Poster} />
+                <p className="mfx-movie-list-item__title">{movie.Title}</p>
+                <span>{movieDetails.Genre}</span>
+            </div>
+        );
+    }
+}
 
 export const MfxMovieList = ({ movies = [] }) => (
     <div className="mfx-movie-list">

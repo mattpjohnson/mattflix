@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../logo.png';
+import logo from '../../logoLarge.png';
 import './style.css';
 
 export const MfxLoadingScreen = () => (

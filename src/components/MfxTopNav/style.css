@@ -5,9 +5,25 @@
     height: 80px;
 }
 
-.mfx-top-nav__logo {
+.mfx-top-nav__logo--small {
+    height: 40px;
+    margin-left: 10px;
+}
+
+.mfx-top-nav__logo--large {
+    display: none;
     height: 40px;
     margin: 0 40px;
+}
+
+@media (min-width: 668px) {
+    .mfx-top-nav__logo--small {
+        display: none;
+    }
+
+    .mfx-top-nav__logo--large {
+        display: block;
+    }
 }
 
 .mfx-top-nav__form {
@@ -30,7 +46,7 @@
 }
 
 .mfx-top-nav__input:focus {
-    outline: none;
+    outline: 0;
 }
 
 .mfx-top-nav__search-btn {
@@ -40,4 +56,13 @@
     color: #aaa;
     margin-left: 10px;
     width: 80px;
+}
+
+.mfx-top-nav__search-btn:focus {
+    outline: 0;
+}
+
+.mfx-top-nav__search-btn:active {
+    background-color: #1f1f1f;
+    box-shadow: inset 1px 1px 0 1px #000;
 }

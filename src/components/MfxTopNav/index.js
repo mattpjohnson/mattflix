@@ -1,5 +1,6 @@
 import React from 'react';
-import logo from '../../logo.png';
+import logoSmall from '../../logoSmall.png';
+import logoLarge from '../../logoLarge.png';
 import './style.css';
 
 export class MfxTopNav extends React.Component {
@@ -20,7 +21,8 @@ export class MfxTopNav extends React.Component {
     render() {
         return (
             <div className="mfx-top-nav">
-                <img alt="Mattflix logo" className="mfx-top-nav__logo" src={logo} />
+                <img alt="Mattflix M logo" className="mfx-top-nav__logo--small" src={logoSmall} />
+                <img alt="Mattflix logo" className="mfx-top-nav__logo--large" src={logoLarge} />
 
                 <form className="mfx-top-nav__form" onSubmit={this.onSubmit.bind(this)}>
                     <input className="mfx-top-nav__input" onChange={this.onChange.bind(this)} value={this.state.searchText} />
