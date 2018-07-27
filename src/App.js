@@ -20,7 +20,6 @@ class App extends Component {
       const movies = await omdb.search('star');
       this.setState({ movies });
     } catch (error) {
-      this.setState({ movies: [] });
       notification.error(error, 'There was an error loading movies.');
     }
   }
@@ -30,6 +29,7 @@ class App extends Component {
       const movies = await omdb.search(searchText);
       this.setState({ movies });
     } catch (error) {
+      this.setState({ movies: [] });
       notification.error(error, 'There was an error loading movies.');
     }
   }

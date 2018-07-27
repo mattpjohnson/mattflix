@@ -26,8 +26,14 @@ class MfxMovieListItem extends React.Component {
     }
 }
 
-export const MfxMovieList = ({ movies = [] }) => (
-    <div className="mfx-movie-list">
-        {movies.map((movie, i) => <MfxMovieListItem key={i} movie={movie} />)}
-    </div>
-);
+export const MfxMovieList = ({ movies = [] }) => {
+    if (movies.length === 0) {
+        return <div className="mfx-movie-list--no-results">No results. Try refining your search.</div>;
+    }
+
+    return (
+        <div className="mfx-movie-list">
+            {movies.map((movie, i) => <MfxMovieListItem key={i} movie={movie} />)}
+        </div>
+    );
+};
