@@ -3,7 +3,9 @@ import logo from '../../logo.png';
 import './style.css';
 
 export class MfxTopNav extends React.Component {
-    state = {};
+    state = {
+        searchText: ''
+    };
 
     onChange(event) {
         const searchText = event.target.value;
@@ -22,6 +24,8 @@ export class MfxTopNav extends React.Component {
 
                 <form className="mfx-top-nav__form" onSubmit={this.onSubmit.bind(this)}>
                     <input className="mfx-top-nav__input" onChange={this.onChange.bind(this)} value={this.state.searchText} />
+
+                    <button className="mfx-top-nav__search-btn" type="submit">Go</button>
                 </form>
             </div>
         );
