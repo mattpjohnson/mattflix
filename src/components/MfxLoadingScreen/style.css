@@ -1,0 +1,9 @@
+.mfx-loading-screen {
+  align-items: center;
+  background-color: #0e0e0e;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  position: fixed;
+  width: 100vw;
+}

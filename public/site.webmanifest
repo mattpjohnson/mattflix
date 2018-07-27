@@ -1,0 +1,14 @@
+{
+    "name": "Mattflix",
+    "short_name": "Mattflix",
+    "icons": [
+        {
+            "src": "/android-chrome-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#0e0e0e",
+    "background_color": "#0e0e0e",
+    "display": "standalone"
+}
