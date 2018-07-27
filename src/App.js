@@ -16,12 +16,8 @@ class App extends Component {
       this.setState({ isLoaded: true });
     }, 2000);
 
-    try {
-      const movies = await omdb.search('star');
-      this.setState({ movies });
-    } catch (error) {
-      notification.error(error, 'There was an error loading movies.');
-    }
+    // Load some initial results (the screen looks a lot better with results)
+    this.onSearch('star wars');
   }
 
   async onSearch(searchText) {
