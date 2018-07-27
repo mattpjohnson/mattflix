@@ -20,7 +20,7 @@ class MfxMovieListItem extends React.Component {
             <div className="mfx-movie-list-item">
                 <img alt={`${movie.Title} poster`} className="mfx-movie-list-item__poster" src={movie.Poster} />
                 <p className="mfx-movie-list-item__title">{movie.Title}</p>
-                <span>{movieDetails.Genre}</span>
+                <span className="mfx-movie-list-item__genre">{movieDetails.Genre}</span>
             </div>
         );
     }

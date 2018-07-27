@@ -1,10 +1,27 @@
 .mfx-movie-list {
+    margin: 0 auto;
+    max-width: 1400px;
     padding: 40px;
+    text-align: center;
 }
 
 .mfx-movie-list-item {
+    display: inline-block;
     margin-bottom: 60px;
     text-align: center;
+    width: 100%;
+}
+
+@media (min-width: 868px) {
+    .mfx-movie-list-item {
+        width: 50%;
+    }
+}
+
+@media (min-width: 1268px) {
+    .mfx-movie-list-item {
+        width: 33%;
+    }
 }
 
 .mfx-movie-list-item__poster {
@@ -14,4 +31,8 @@
 
 .mfx-movie-list-item__title {
     color: #fff;
+}
+
+.mfx-movie-list-item__genre {
+    color: gray;
 }
