@@ -1,5 +1,5 @@
 ![Mattflix logo](https://cdn.rawgit.com/mattpjohnson/mattflix/4cdaf82b/src/logoLarge.png)
-My solution to a coding challenge.
+> My solution to a coding challenge.
 
 ![Mattflix screenshot](https://cdn.rawgit.com/mattpjohnson/mattflix/4222cff5/docs/screenshot.png)
 
