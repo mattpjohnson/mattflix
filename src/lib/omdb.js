@@ -1,4 +1,4 @@
-const baseUrl = 'https://www.omdbapi.com/?apikey=9f572b90&r=json';
+const baseUrl = `https://www.omdbapi.com/?apikey=${process.env.API_KEY}&r=json`;
 
 const detailsCache = {};
 
