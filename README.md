@@ -14,3 +14,7 @@ I then created simple wireframes for these pages.
 
 I wanted to make sure that the initial load screen displayed results, but I found that the OMDB API does not have an option for doing this.
 To get around this I just hardcoded an initial search for the term `star wars`.
+
+## Running
+1. From within the root directory of this project, run `yarn`
+2. Run the command `npx cross-env REACT_APP_API_KEY=<your-api-key> yarn start`
