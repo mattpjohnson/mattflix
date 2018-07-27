@@ -31,9 +31,42 @@
     }
 }
 
+.mfx-movie-list-item__poster-wrapper {
+    display: inline-block;
+    position: relative;
+}
+
 .mfx-movie-list-item__poster {
     height: 100%;
     max-width: 100%;
+}
+
+.mfx-movie-list-item__details {
+    background-color: #000000db;
+    bottom: 0;
+    display: none;
+    left: 0;
+    padding: 30px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.mfx-movie-list-item__poster:hover + .mfx-movie-list-item__details,
+.mfx-movie-list-item__details:hover {
+    display: block;
+}
+
+.mfx-movie-list-item__details__title {
+    color: #717171;
+    font-size: 12px;
+    font-weight: 900;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.mfx-movie-list-item__details__plot {
+    color: #bdbdbd;
 }
 
 .mfx-movie-list-item__title {
