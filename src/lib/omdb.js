@@ -1,5 +1,3 @@
-import { Exception } from "handlebars";
-
 const baseUrl = 'https://www.omdbapi.com/?apikey=9f572b90&r=json';
 
 const detailsCache = {};
@@ -10,7 +8,7 @@ export const omdb = {
             .then(response => response.json());
 
         if (result.Response !== 'True') {
-            throw new Exception(result.Error);
+            throw result.Error;
         }
 
         return result.Search;
