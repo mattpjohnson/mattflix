@@ -1,3 +1,16 @@
-.mfx-movie-list__poster {
-    width: 10px;
+.mfx-movie-list {
+    padding: 40px;
+}
+
+.mfx-movie-list-item {
+    margin-bottom: 60px;
+}
+
+.mfx-movie-list-item__poster {
+    height: 100%;
+    max-width: 100%;
+}
+
+.mfx-movie-list-item__title {
+    color: #fff;
 }

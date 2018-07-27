@@ -1,5 +1,15 @@
 import React from 'react';
+import './style.css';
 
-export const MfxMovieList = ({ movies = [] }) => movies.map((movie, i) => (
-    <img alt="" className="mfx-movie-list__poster" key={i} src={movie.Poster} />
-));
+const MfxMovieListItem = ({ movie }) => (
+    <div className="mfx-movie-list-item">
+        <img alt={`${movie.Title} poster`} className="mfx-movie-list-item__poster" src={movie.Poster} />
+        <p className="mfx-movie-list-item__title">{movie.Title}</p>
+    </div>
+);
+
+export const MfxMovieList = ({ movies = [] }) => (
+    <div className="mfx-movie-list">
+        {movies.map((movie, i) => <MfxMovieListItem key={i} movie={movie} />)}
+    </div>
+);
